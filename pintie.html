@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .p1{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            /* width: 100%; */
+            margin-left: 200px;
+            margin-right: 100px;
+            line-height: 20px;
+
+        }
+        .p2{
+            translate: -80px 15px;
+
+        }
+        .p3{
+            color: brown;
+            font-size: 15px;
+            letter-spacing: 60px;
+            margin-top: 20px;
+            translate: -300px 10px;
+        }
+        .p4{
+            font-size: 10px;
+            color: brown;
+            translate: 320px 20px;
+          
+        }
+        .p5{
+            margin-top: 20px;
+            margin-bottom: 0;
+            background-attachment: fixed;
+        }
+        .p6{
+            margin-bottom: 0;
+            translate:10px -10px;
+        }
+        .p1 div{
+            width: 869px;
+        }
+        .title1{
+            color: brown;
+            translate: -420px 17px;
+            font-size: 10px;
+            
+
+        }
+        .title2{
+            translate: 120px 15px;
+
+
+        }
+        .box ul li{
+            
+            translate: -20px -20px;
+            float: left;
+            list-style: none;
+            width: 180px;
+            height: 200px;
+            background-color: white;
+            box-shadow: 3px 2px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+            transition: all 1s;
+        }
+        .box ul li img{
+            width:  170px;
+            height: 170px;
+            position: absolute;
+            transition: all 1s;
+
+        }
+        .box ul .on{
+             background: url(img/16.jpeg) no-repeat;
+             width: 230px;
+             height: 240px;
+             padding-left: 70px;
+        }
+        .box ul .on img{
+            width: 200px;
+            height: 200px;
+            
+        }
+        .drop{
+            float: right;
+            line-height: 35px;
+            width: 80px;
+            translate: -110px -870px;
+            background-color:#fff;
+            text-align: center;
+            margin-right: 10px;
+            color: brown;
+        }
+
+        .droplist{
+            box-shadow: 0 1px 2px #bbb;
+            display: none;
+        }
+        .drop:hover .droplist{
+              display: block;
+        }
+        .droplist a{ 
+            color: brown;
+            text-decoration: none;
+            display: block;
+        }
+        .droplist a:hover{
+            background-color: #bbb;
+
+        }
+
+        
+    </style>
+</head>
+<body>
+    <div class="p1">
+        <div class="p2">
+            <img src="06.jpeg" width="30px" height="30px">
+        </div>
+        <div class="title1">搜索</div>
+        <div class="p3">墨韵</div>
+        <!-- <div class="p4">菜单</div>
+        <div class="title2">
+            <img src="05.jpeg" width="40px" height="30px">
+        </div> -->
+    </div>
+    <div class="p5">
+        <img src="08.jpeg" width="100%px" height="600px">
+    </div>
+    <!-- <div class="p6">
+        <img src="09.jpeg" width="100%px" height="180px">
+    </div> -->
+    <div class="box">
+        <ul>
+            <li class="on">
+              <a href="#">
+                <img src="10.jpeg">
+              </a>
+            </li>
+            <li>
+                <a href="#">
+                  <img src="10.jpeg">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="10.jpeg">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="10.jpeg">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="10.jpeg">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="10.jpeg">
+                </a>
+              </li>
+              <li>
+                <a href="#">
+                  <img src="10.jpeg">
+                </a>
+              </li>            
+        </ul>
+
+    </div>
+
+    <div class="drop">
+        <span>菜单</span>
+        <div class="droplist">
+            <a href="shouye.html">网页首页</a>
+            <a href="#">宋画历史</a>
+            <a href="#">新闻资讯</a>
+            <a href="#">关于我们</a>
+
+        </div>
+    </div>
+
+    
+</body>
+<script src="jquery.min.js" type="text/javascript" charset="utf-8"></script>
+<script type="text/javascript">
+    $(".box ul li").hover(function(){
+        $(this).addClass("on").siblings().removeClass("on");
+    })
+
+</script>
+
+</html>
